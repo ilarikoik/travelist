@@ -54,7 +54,7 @@ export default function TripList({ handleRef, trips }: ListPara) {
                 <div className=" flex flex-row w-full justify-between ">
                   <div className=" h-fit w-1/3 flex justify-start items-center">
                     <p className="text-accent font-semibold ">
-                      {weather[index] && (
+                      {weather[index] && weather[index].current && (
                         <img
                           src={weather[index].current.condition.icon}
                           alt="Weather icon"
@@ -63,7 +63,9 @@ export default function TripList({ handleRef, trips }: ListPara) {
                       )}
                     </p>
                     <h2 className="text-md font-semibold md:text-xl text-accent">
-                      {weather[index] && weather[index].current.temp_c + "°C"}
+                      {weather[index] &&
+                        weather[index].current &&
+                        weather[index].current.temp_c + "°C"}
                     </h2>
                   </div>
                   <DeleteOutlineIcon
