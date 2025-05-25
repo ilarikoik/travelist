@@ -142,7 +142,7 @@ export default function Plans() {
               >
                 <div className="flex flex-col items-center  center w-full">
                   <div className="flex w-full">
-                    <h2 className=" w-3/6 flex justify-start p-2 text-primary font-bold text-xl">
+                    <h2 className=" w-3/6 flex justify-start items-center p-2 text-primary font-bold text-xl">
                       <DeleteOutlineIcon
                         color="error"
                         className="hover:cursor-pointer"
@@ -183,9 +183,10 @@ export default function Plans() {
                             key={idx}
                             className="flex justify-between items-center w-full  font-semibold"
                           >
-                            <p className="flex-1 flex justify-start ">
+                            <p className="flex-1 flex justify-start items-center ">
                               <DeleteOutlineIcon
                                 color="error"
+                                fontSize="small"
                                 className="hover:cursor-pointer"
                                 onClick={() => deletethis(detail, index)}
                               />
